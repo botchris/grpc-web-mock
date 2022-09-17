@@ -33,9 +33,9 @@ export const ToBinaryResponse = (message: jspb.Message, status: Status = { code:
 	return buffer;
 };
 
-const trailerMessage = (status: Status | null): Uint8Array => {
-	const code = status ? status.code : 0;
-	const details = status ? status.details : "";
+const trailerMessage = (status: Status): Uint8Array => {
+	const code = status.code;
+	const details = status.details || "";
 
 	let headers = "grpc-status:" + code + "\r\n";
 	headers += "grpc-message:" + details + "\r\n";
