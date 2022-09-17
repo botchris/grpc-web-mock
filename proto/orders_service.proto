@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package shopping.v1;
+
+service OrdersService {
+  rpc ListOrders(ListOrdersRequest) returns (ListOrdersResponse);
+}
+
+message ListOrdersRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+  string query = 3;
+}
+
+message ListOrdersResponse {
+  repeated Order orders = 1;
+  string next_page_token = 2;
+  uint32 total_size = 3;
+}
+
+message Order {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  string status = 4;
+}

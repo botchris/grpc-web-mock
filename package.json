@@ -1,11 +1,11 @@
 {
   "name": "@botchris/grpc-web-mock",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Simple pure typescript grpc-web mocking library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -30,9 +30,23 @@
   },
   "homepage": "https://github.com/botchris/grpc-web-mock#readme",
   "dependencies": {
-    "@types/google-protobuf": "^3.15.6",
-    "babel-preset-es2015": "^6.24.1",
     "google-protobuf": "^3.21.0"
   },
-  "prepublish": "tsc"
+  "prepublish": "tsc",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/jest": "^24.0.13",
+    "@types/mockjs": "^1.0.6",
+    "@types/node": "^14.18.10",
+    "@types/restify": "^8.5.5",
+    "@types/shelljs": "^0.8.11",
+    "@types/supertest": "^2.0.7",
+    "jest": "^29.0.3",
+    "supertest": "^4.0.2",
+    "ts-jest": "^29.0.1",
+    "ts-node": "^8.1.0",
+    "ts-node-dev": "^2.0.0-0",
+    "tslint": "^5.17.0",
+    "typescript": "^4.8.2"
+  }
 }
