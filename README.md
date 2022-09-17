@@ -27,20 +27,13 @@ describe("Orders Service", () => {
                     order.setId(i);
                     order.setPrice(1000);
                     order.setQuantity(1);
-                    
                     orders.push(order);
                 }
                 
                 res.setOrdersList(orders);
 
                 // Mock response data.
-                req.reply({
-                    statusCode: 200,
-                    headers: {
-                        "content-type": "application/grpc-web-text",
-                    },
-                    body: grpcMock.ToTextResponse(res),
-                });
+                req.reply(grpcMock.ToTextResponse(res));
             }
         ).as("@listOrders");
 

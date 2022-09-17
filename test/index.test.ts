@@ -23,7 +23,7 @@ describe("text encoder", () => {
         const htr = ToTextResponse(res, {code: 0});
 
         expect(htr.body).not.toBe("");
-        expect(htr.status).toBe(200);
+        expect(htr.statusCode).toBe(200);
         expect(htr.statusText).toBe("OK");
         expect(htr.headers["content-type"]).toBe("application/grpc-web-text");
     });
@@ -37,7 +37,7 @@ describe("text encoder", () => {
         const htr = ToTextResponse(res, {code: Code.INTERNAL});
 
         expect(htr.body).not.toBe("");
-        expect(htr.status).toBe(500);
+        expect(htr.statusCode).toBe(500);
         expect(htr.statusText).toBe("Internal Server Error");
         expect(htr.headers["content-type"]).toBe("application/grpc-web-text");
     });

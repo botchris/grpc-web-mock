@@ -5,10 +5,10 @@ import { Code, Status } from "./status";
  * Response represents a HTTP response coming from a gRPC-web backend.
  */
 export interface Response {
-	status: number;
-	statusText: string;
-	headers: Record<string, string>;
-	body: Uint8Array | string;
+	statusCode?: number;
+	statusText?: string;
+	headers?: { [key: string]: string };
+	body?: Uint8Array | string;
 }
 
 /**
@@ -24,7 +24,7 @@ export const ToTextResponse = (message: jspb.Message, status: Status = { code: C
 	const {code, text} = statusToHTTP(status);
 
 	return {
-		status: code,
+		statusCode: code,
 		statusText: text,
 		headers: {
 			"content-type": "application/grpc-web-text",
@@ -52,7 +52,7 @@ export const ToBinaryResponse = (message: jspb.Message, status: Status = { code:
 	buffer.set(tail, msg.length);
 
 	return {
-		status: code,
+		statusCode: code,
 		statusText: text,
 		headers: {
 			"content-type": "application/grpc-web+proto",
