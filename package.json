@@ -1,0 +1,34 @@
+{
+  "name": "@botchris/grpc-web-mock",
+  "version": "0.0.1",
+  "description": "Simple pure typescript grpc-web mocking library",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/botchris/grpc-web-mock.git"
+  },
+  "keywords": [
+    "grpc",
+    "mock",
+    "proto",
+    "protocol-buffers",
+    "test",
+    "stub",
+    "api",
+    "test",
+    "typescript",
+    "cypress"
+  ],
+  "author": "Chris Castro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/botchris/grpc-web-mock/issues"
+  },
+  "homepage": "https://github.com/botchris/grpc-web-mock#readme",
+  "dependencies": {
+    "google-protobuf": "^3.21.0"
+  }
+}
