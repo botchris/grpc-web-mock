@@ -1,6 +1,6 @@
 {
   "name": "@botchris/grpc-web-mock",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Simple pure typescript grpc-web mocking library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
