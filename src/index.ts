@@ -2,7 +2,10 @@ import * as jspb from "google-protobuf";
 import { Code, Status } from "./status";
 
 /**
- * Response represents a HTTP response coming from a gRPC-web backend.
+ * Response represents an HTTP response coming from a gRPC-web backend.
+ *
+ * Depending on the protocol being used, the response body may be a binary
+ * protocol-buffer message or a base64-encoded protocol buffer message.
  */
 export interface Response {
 	statusCode?: number;
@@ -15,13 +18,13 @@ export interface Response {
  * Takes a Protocol Buffer message and returns a base64-encoded gRPC response
  * as it would be sent by a gRPC-web server using "grpc-web-text" encoding.
  *
- * @param message A Protocol Buffer message
- * @param status Optional gRPC status response, by default the status code is 0 (OK)
+ * @param message A Protocol Buffer message.
+ * @param status Optional gRPC status response, by default the status code is 0 (OK).
  */
 export const ToTextResponse = (message: jspb.Message, status: Status = { code: Code.OK }): Response => {
 	const msg = framerBase64(message.serializeBinary(), FrameType.DATA);
 	const tail = framerBase64(trailerMessage(status), FrameType.TRAILER);
-	const {code, text} = statusToHTTP(status);
+	const {code, text} = codeToHTTP(status.code);
 
 	return {
 		statusCode: code,
@@ -39,14 +42,14 @@ export const ToTextResponse = (message: jspb.Message, status: Status = { code: C
  * Takes a Protocol Buffer message and returns a binary-encoded gRPC response
  * as it would be sent by a gRPC-web server using "grpc-web+proto" encoding.
  *
- * @param message A Protocol Buffer message
- * @param status Optional gRPC status response, by default the status code is 0 (OK)
+ * @param message A Protocol Buffer message.
+ * @param status Optional gRPC status response, by default the status code is 0 (OK).
  */
 export const ToBinaryResponse = (message: jspb.Message, status: Status = { code: Code.OK }): Response => {
 	const msg = framerBinary(message.serializeBinary(), FrameType.DATA);
 	const tail = framerBinary(trailerMessage(status), FrameType.TRAILER);
 	const buffer = new Uint8Array(msg.length + tail.length);
-	const {code, text} = statusToHTTP(status);
+	const {code, text} = codeToHTTP(status.code);
 
 	buffer.set(msg, 0);
 	buffer.set(tail, msg.length);
@@ -106,8 +109,8 @@ const getPrefix = (binMessage: Uint8Array, type: FrameType): Uint8Array => {
 	return new Uint8Array([kind, (len >> 24) & 0xff, (len >> 16) & 0xff, (len >> 8) & 0xff, (len >> 0) & 0xff]);
 };
 
-const statusToHTTP = (status: Status): {code: number; text: string} => {
-	switch (status.code) {
+const codeToHTTP = (code: Code): {code: number; text: string} => {
+	switch (code) {
 		case Code.OK:
 			return {code: 200, text: "OK"};
 		case Code.CANCELLED:
