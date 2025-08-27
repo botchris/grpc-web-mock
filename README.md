@@ -64,3 +64,17 @@ describe("Orders Service", () => {
     });
 });
 ```
+
+## Development
+
+### Install dependencies
+
+```bash
+yarn install
+```
+
+### Run tests
+
+```bash
+yarn test
+```

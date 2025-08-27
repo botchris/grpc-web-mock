@@ -1,6 +1,6 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as orders_service_pb from './orders_service_pb';
+import * as orders_service_pb from './orders_service_pb'; // proto import: "orders_service.proto"
 
 
 export class OrdersServiceClient {

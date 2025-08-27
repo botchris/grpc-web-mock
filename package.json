@@ -1,6 +1,6 @@
 {
   "name": "@botchris/grpc-web-mock",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Simple pure typescript grpc-web mocking library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,7 +30,8 @@
   },
   "homepage": "https://github.com/botchris/grpc-web-mock#readme",
   "dependencies": {
-    "google-protobuf": "^3.21.0"
+    "google-protobuf": "^4.0.0",
+    "grpc-web": "^1.5.0"
   },
   "prepublish": "tsc",
   "devDependencies": {

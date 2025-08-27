@@ -1,15 +1,19 @@
+// source: orders_service.proto
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {missingRequire} reports error on implicit type usages.
  * @suppress {messageConventions} JS Compiler reports an error if a variable or
  *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
+/* eslint-disable */
+// @ts-nocheck
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = globalThis;
 
 goog.exportSymbol('proto.shopping.v1.ListOrdersRequest', null, global);
 goog.exportSymbol('proto.shopping.v1.ListOrdersResponse', null, global);
@@ -82,13 +86,15 @@ if (goog.DEBUG && !COMPILED) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto suitable for use in Soy templates.
+ * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.shopping.v1.ListOrdersRequest.prototype.toObject = function(opt_includeInstance) {
@@ -98,8 +104,8 @@ proto.shopping.v1.ListOrdersRequest.prototype.toObject = function(opt_includeIns
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.shopping.v1.ListOrdersRequest} msg The msg instance to transform.
  * @return {!Object}
@@ -107,9 +113,9 @@ proto.shopping.v1.ListOrdersRequest.prototype.toObject = function(opt_includeIns
  */
 proto.shopping.v1.ListOrdersRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    pageSize: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    pageToken: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    query: jspb.Message.getFieldWithDefault(msg, 3, "")
+pageSize: jspb.Message.getFieldWithDefault(msg, 1, 0),
+pageToken: jspb.Message.getFieldWithDefault(msg, 2, ""),
+query: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -151,11 +157,11 @@ proto.shopping.v1.ListOrdersRequest.deserializeBinaryFromReader = function(msg, 
       msg.setPageSize(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setPageToken(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setQuery(value);
       break;
     default:
@@ -220,9 +226,12 @@ proto.shopping.v1.ListOrdersRequest.prototype.getPageSize = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.shopping.v1.ListOrdersRequest} returns this
+ */
 proto.shopping.v1.ListOrdersRequest.prototype.setPageSize = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -235,9 +244,12 @@ proto.shopping.v1.ListOrdersRequest.prototype.getPageToken = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.shopping.v1.ListOrdersRequest} returns this
+ */
 proto.shopping.v1.ListOrdersRequest.prototype.setPageToken = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -250,9 +262,12 @@ proto.shopping.v1.ListOrdersRequest.prototype.getQuery = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.shopping.v1.ListOrdersRequest} returns this
+ */
 proto.shopping.v1.ListOrdersRequest.prototype.setQuery = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -268,13 +283,15 @@ proto.shopping.v1.ListOrdersResponse.repeatedFields_ = [1];
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto suitable for use in Soy templates.
+ * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.shopping.v1.ListOrdersResponse.prototype.toObject = function(opt_includeInstance) {
@@ -284,8 +301,8 @@ proto.shopping.v1.ListOrdersResponse.prototype.toObject = function(opt_includeIn
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.shopping.v1.ListOrdersResponse} msg The msg instance to transform.
  * @return {!Object}
@@ -293,10 +310,10 @@ proto.shopping.v1.ListOrdersResponse.prototype.toObject = function(opt_includeIn
  */
 proto.shopping.v1.ListOrdersResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    ordersList: jspb.Message.toObjectList(msg.getOrdersList(),
+ordersList: jspb.Message.toObjectList(msg.getOrdersList(),
     proto.shopping.v1.Order.toObject, includeInstance),
-    nextPageToken: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    totalSize: jspb.Message.getFieldWithDefault(msg, 3, 0)
+nextPageToken: jspb.Message.getFieldWithDefault(msg, 2, ""),
+totalSize: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -339,7 +356,7 @@ proto.shopping.v1.ListOrdersResponse.deserializeBinaryFromReader = function(msg,
       msg.addOrders(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setNextPageToken(value);
       break;
     case 3:
@@ -410,9 +427,12 @@ proto.shopping.v1.ListOrdersResponse.prototype.getOrdersList = function() {
 };
 
 
-/** @param {!Array<!proto.shopping.v1.Order>} value */
+/**
+ * @param {!Array<!proto.shopping.v1.Order>} value
+ * @return {!proto.shopping.v1.ListOrdersResponse} returns this
+*/
 proto.shopping.v1.ListOrdersResponse.prototype.setOrdersList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 1, value);
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
@@ -428,9 +448,10 @@ proto.shopping.v1.ListOrdersResponse.prototype.addOrders = function(opt_value, o
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.shopping.v1.ListOrdersResponse} returns this
  */
 proto.shopping.v1.ListOrdersResponse.prototype.clearOrdersList = function() {
-  this.setOrdersList([]);
+  return this.setOrdersList([]);
 };
 
 
@@ -443,9 +464,12 @@ proto.shopping.v1.ListOrdersResponse.prototype.getNextPageToken = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.shopping.v1.ListOrdersResponse} returns this
+ */
 proto.shopping.v1.ListOrdersResponse.prototype.setNextPageToken = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -458,9 +482,12 @@ proto.shopping.v1.ListOrdersResponse.prototype.getTotalSize = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.shopping.v1.ListOrdersResponse} returns this
+ */
 proto.shopping.v1.ListOrdersResponse.prototype.setTotalSize = function(value) {
-  jspb.Message.setProto3IntField(this, 3, value);
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -469,13 +496,15 @@ proto.shopping.v1.ListOrdersResponse.prototype.setTotalSize = function(value) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto suitable for use in Soy templates.
+ * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.shopping.v1.Order.prototype.toObject = function(opt_includeInstance) {
@@ -485,8 +514,8 @@ proto.shopping.v1.Order.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.shopping.v1.Order} msg The msg instance to transform.
  * @return {!Object}
@@ -494,10 +523,10 @@ proto.shopping.v1.Order.prototype.toObject = function(opt_includeInstance) {
  */
 proto.shopping.v1.Order.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    description: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    status: jspb.Message.getFieldWithDefault(msg, 4, "")
+id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+description: jspb.Message.getFieldWithDefault(msg, 3, ""),
+status: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
 
   if (includeInstance) {
@@ -535,19 +564,19 @@ proto.shopping.v1.Order.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setId(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setName(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setDescription(value);
       break;
     case 4:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setStatus(value);
       break;
     default:
@@ -619,9 +648,12 @@ proto.shopping.v1.Order.prototype.getId = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.shopping.v1.Order} returns this
+ */
 proto.shopping.v1.Order.prototype.setId = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -634,9 +666,12 @@ proto.shopping.v1.Order.prototype.getName = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.shopping.v1.Order} returns this
+ */
 proto.shopping.v1.Order.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -649,9 +684,12 @@ proto.shopping.v1.Order.prototype.getDescription = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.shopping.v1.Order} returns this
+ */
 proto.shopping.v1.Order.prototype.setDescription = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -664,9 +702,12 @@ proto.shopping.v1.Order.prototype.getStatus = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.shopping.v1.Order} returns this
+ */
 proto.shopping.v1.Order.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
