@@ -7,7 +7,7 @@ on:
       - "src/**"
 
 jobs:
-  console-test:
+  yarn-tests:
     runs-on: ubuntu-latest
     strategy:
       matrix:
