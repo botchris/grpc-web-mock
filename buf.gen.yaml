@@ -1,0 +1,12 @@
+version: v2
+managed:
+  enabled: true
+plugins:
+  - remote: buf.build/protocolbuffers/js
+    out: proto
+    opt: import_style=commonjs
+  - remote: buf.build/grpc/web
+    out: proto
+    opt:
+      - import_style=commonjs+dts
+      - mode=grpcwebtext

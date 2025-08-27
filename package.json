@@ -30,7 +30,8 @@
   },
   "homepage": "https://github.com/botchris/grpc-web-mock#readme",
   "dependencies": {
-    "google-protobuf": "^3.21.0"
+    "google-protobuf": "^4.0.0",
+    "grpc-web": "^1.5.0"
   },
   "prepublish": "tsc",
   "devDependencies": {

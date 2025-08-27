@@ -1,7 +1,6 @@
-import {ToTextResponse} from "../src";
+import {ToTextResponse, ToBinaryResponse} from "../src";
 import {ListOrdersResponse, Order} from "../proto/orders_service_pb";
 import {Code} from "../src/status";
-import {ToBinaryResponse} from "../dist";
 
 describe("GIVEN a ListOrdersResponse with 10 orders", () => {
     const res = new ListOrdersResponse();
