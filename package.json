@@ -1,11 +1,12 @@
 {
   "name": "@botchris/grpc-web-mock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple pure typescript grpc-web mocking library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -51,5 +52,10 @@
   },
   "resolutions": {
     "glob": "^10.3.10"
-  }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
 }
