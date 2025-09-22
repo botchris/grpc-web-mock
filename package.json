@@ -1,9 +1,36 @@
 {
   "name": "@botchris/grpc-web-mock",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple pure typescript grpc-web mocking library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./helpers": {
+      "import": "./dist/helpers.js",
+      "require": "./dist/helpers.js",
+      "types": "./dist/helpers.d.ts"
+    },
+    "./status": {
+      "import": "./dist/status.js",
+      "require": "./dist/status.js",
+      "types": "./dist/status.d.ts"
+    },
+    "./dist/helpers": {
+      "import": "./dist/helpers.js",
+      "require": "./dist/helpers.js",
+      "types": "./dist/helpers.d.ts"
+    },
+    "./dist/status": {
+      "import": "./dist/status.js",
+      "require": "./dist/status.js",
+      "types": "./dist/status.d.ts"
+    }
+  },
   "scripts": {
     "test": "jest",
     "build": "tsc"
